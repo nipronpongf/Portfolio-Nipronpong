@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | ผลงานของผม</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ส่วนหัว (Header/Navbar) */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            display: flex;           
+            align-items: center;     
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .logo-img {
+            height: 100px;            
+            width: auto;             
+            border-radius: 50%;      
+            margin-right: 12px;
+            margin-top: -2rem;     
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            color: #666;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        /* ส่วนแนะนำตัว (Hero Section) */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+            color: #ecf0f1;
+        }
+
+        .btn {
+            padding: 10px 30px;
+            background-color: white;
+            color: #3498db;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #3498db;
+            color: white;
+            border: 2px solid white;
+        }
+
+        /* ส่วนผลงาน (Portfolio Grid) */
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px); 
+        }
+
+        .project-img {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd; 
+            object-fit: cover;
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        .project-info h3 {
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .project-info p {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        /* ส่วนทักษะ (Skills) */
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill-tag {
+            background-color: #e0e0e0;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        /* ส่วนท้าย (Footer) */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        /* Responsive มือถือ */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; } 
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="Comic Pizza.png" alt="รูปโปรไฟล์" class="logo-img">
+                MyPortfolio.
+            </div>
+            <div class="nav-links">
+                <a href="#about">เกี่ยวกับผม</a>
+                <a href="#portfolio">ผลงาน</a>
+                <a href="#skills">ทักษะ</a>
+                <a href="#contact">ติดต่อ</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="about">
+        <h1>สวัสดีครับ, ผมชื่อ นายนิพรพงษ์ ฝักฝ่าย</h1>
+        <h3>Education & Licenses</h3>
+        <ul style="line-height: 1.8;">
+            Graduated from <strong>Thammasat University</strong>. GPAX 3.18<br>
+            The Department of Electrical Engineering, <strong>Faculty of Engineering</strong>.<br>
+            Engineer License (Electrical Power), <strong>Council of Engineers</strong>.
+        </ul>
+        <p style="margin-top: 2rem;">ยินดีต้อนรับสู่พื้นที่รวบรวมผลงานของผม</p>
+        <a href="#portfolio" class="btn">ดูผลงานของผม</a>
+    </section>
+
+    <section class="section" id="portfolio">
+        <h2 class="section-title">ผลงานที่ผ่านมา</h2>
+        <h3 style="text-align: left; color: #555; margin-bottom: 2rem; margin-top: -2rem;">
+        MITR PHOL SINGBURI SUGAR CO., LTD.
+        </h3>
+        
+        <div class="portfolio-grid">
+            
+            <div class="project-card">
+                <img src="Innovation.jpg" alt="รูปผลงานที่ 1" class="project-img">
+                <div class="project-info">
+                    <h3>1st Place – The Best Kaizen Award 2025:</h3>
+                    <p>Developed a web-page temperature and humidity monitoring system with alert notifications.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="Kaizen.jpg" alt="รูปผลงานที่ 2" class="project-img">
+                <div class="project-info">
+                    <h3>3rd Place – MITR Beyond Innovation Awards 2025: </h3>
+                    <p>Automatic Fog Cannon Control System using Radio Frequency.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="Work Order.jpg" alt="รูปผลงานที่ 3" class="project-img">
+                <div class="project-info">
+                    <h3>Work Order Online </h3>
+                    <p>An online application for issuing work orders used in maintenance, repair, and engineering tasks, built on the Microsoft Platform.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="Monthly report.jpg" alt="รูปผลงานที่ 3" class="project-img">
+                <div class="project-info">
+                    <h3>Monthly Report Online </h3>
+                    <p>An application for reporting machine inspections and repairs to department managers and shift supervisors.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="Train power app.png" alt="รูปผลงานที่ 3" class="project-img">
+                <div class="project-info">
+                    <h3>Training workshops on Power Apps, Power Automate </h3>
+                    <p> training workshops on Power Apps, Power Automate to enhance employees’ digital skills.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="Train Canva.jpg" alt="รูปผลงานที่ 3" class="project-img">
+                <div class="project-info">
+                    <h3>Training workshops on Canva </h3>
+                    <p> training workshops on Canva to enhance employees’ digital skills.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <h3 style="text-align: left; color: #555; margin-bottom: 2rem; margin-top: 2rem;">
+        ACADEMIC & VOLUNTEER ACTIVITIES
+        </h3>
+        <div class="portfolio-grid">
+            
+            <div class="project-card">
+                <img src="Openhouse.jpg" alt="รูปผลงานที่ 1" class="project-img">
+                <div class="project-info">
+                    <h3>Thammasat Open House 2023</h3>
+                    <p>Teaching Assistant in the Engineering Department, providing guidance in electrical engineering and supervising laboratory workshops.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="AI camera.jpg" alt="รูปผลงานที่ 2" class="project-img">
+                <div class="project-info">
+                    <h3>TSE Training Program on Engineering Fundamental 2024 </h3>
+                    <p>Assisted in teaching high school students how to control robot movements by managing motor speed and using an ESP32 CAM for path
+                    detection with AI machine learning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="skills" style="background-color: white;">
+        <h2 class="section-title">ทักษะความสามารถ</h2>
+        <div class="skills-container">
+            <span class="skill-tag">Electrical Design<br>
+                <li>ระบบไฟฟ้าและแสงสว่างโรงอาหาร</li>
+                <li>EV Charger station</li>
+                <li>AutoCAD</li>
+            </span>
+            <span class="skill-tag">Cost Estimation<br>
+                <li>Bill Of Quantities</li>
+            </span>
+            <span class="skill-tag">Coding<br>
+                <li>Full-Code</li>
+                <li>Low-Code</li>
+                <li>No-Code</li>
+            </span>
+            <span class="skill-tag">Automation<br>
+                <li>Programable Logic Controller</li>
+            </span>
+            <span class="skill-tag">IoT&Monitoring</span>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h3>สนใจร่วมงานด้วยกัน?</h3>
+        <p style="margin: 1rem 0;">ติดต่อผมได้ที่: nipronpong@gmail.com | โทร: 092-282-2104</p>
+        <p>&copy; 2025 My Portfolio. Nipronpong.</p>
+    </footer>
+
+</body>
+</html>
